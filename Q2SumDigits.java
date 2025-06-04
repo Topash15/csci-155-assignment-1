@@ -7,22 +7,23 @@ public class Q2SumDigits {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter an integer between 0 and 1000:");
         int inputInt = input.nextInt();
-        
-        // break integer into individual digits
-        // thousands
-        int thousands = inputInt / 1000;
-        int remainder = inputInt % 1000;
 
-        // hundreds
-        int hundreds = remainder / 100;
-        remainder = remainder % 100;
+        // breaks integer into individual digits
+            // thousands
+            int thousands = inputInt / 1000;
+            int remainder = inputInt % 1000;
 
-        // tens
-        int tens = remainder / 10;
+            // hundreds
+            int hundreds = remainder / 100;
+            remainder = remainder % 100;
 
-        // ones
-        int ones = remainder % 10;
+            // tens
+            int tens = remainder / 10;
 
+            // ones
+            int ones = remainder % 10;
+
+        // adds and outputs sum of digits
         int sum = thousands + hundreds + tens + ones;
         System.out.println(sum);
     }
